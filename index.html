@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Talento360 — Avaliação DISC</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>Talento360</h1>
+    <p class="sub">Avaliação comportamental DISC em 24 grupos — leva ~7 a 10 min.</p>
+  </header>
+
+  <main class="container">
+    <!-- Progresso -->
+    <div class="progress-wrap" aria-label="Progresso do formulário">
+      <div id="progress-bar" class="progress-bar" style="width: 0%"></div>
+    </div>
+    <p id="progress-text" class="progress-text">Progresso: 0%</p>
+
+    <!-- Identificação -->
+    <section class="card">
+      <h2>Identificação</h2>
+      <div class="grid">
+        <label>
+          Nome completo
+          <input id="nome" name="nome" type="text" placeholder="Ex.: Ana Silva" required>
+        </label>
+        <label>
+          E-mail
+          <input id="email" name="email" type="email" placeholder="ana@email.com" required>
+        </label>
+      </div>
+    </section>
+
+    <form id="disc-form" novalidate>
+      <!-- STEP 1 -->
+      <section class="card step" data-step="1" hidden>
+        <h3>Grupo 1</h3>
+        <p>Escolha a alternativa que mais se aproxima do seu comportamento no trabalho.</p>
+        <fieldset>
+          <legend class="sr-only">Grupo 1</legend>
+          <label class="option">
+            <input type="radio" name="g1" value="D" required>
+            Dominância (D) — Toma decisões rapidamente, foca em resultados.
+          </label>
+          <label class="option">
+            <input type="radio" name="g1" value="I">
+            Influência (I) — Comunicativo(a), convence e motiva o grupo.
+          </label>
+          <label class="option">
+            <input type="radio" name="g1" value="S">
+            Estabilidade (S) — Calmo(a), consistente, coopera com a equipe.
+          </label>
+          <label class="option">
+            <input type="radio" name="g1" value="C">
+            Conformidade (C) — Analítico(a), atento(a) a regras e qualidade.
+          </label>
+        </fieldset>
+      </section>
+
+      <!-- STEP 2 -->
+      <section class="card step" data-step="2" hidden>
+        <h3>Grupo 2</h3>
+        <p>Selecione a alternativa que melhor te define na maioria das situações.</p>
+        <fieldset>
+          <legend class="sr-only">Grupo 2</legend>
+          <label class="option">
+            <input type="radio" name="g2" value="D" required>
+            D — Assume riscos e responsabilidade pelos resultados.
+          </label>
+          <label class="option">
+            <input type="radio" name="g2" value="I">
+            I — Entusiasta, gosta de interagir e persuadir.
+          </label>
+          <label class="option">
+            <i
