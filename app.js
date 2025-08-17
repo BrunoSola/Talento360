@@ -1,13 +1,13 @@
 // ===== Config =====
-const TOTAL_STEPS = 24; // ajuste após duplicar os blocos .step no HTML
-const API_URL = 'https://j6g4zsev6c.execute-api.sa-east-1.amazonaws.com/prod/talento360'; // definir na Parte API
+const TOTAL_STEPS = 24; // ajuste quando duplicar até 24
+const API_URL = 'https://j6g4zsev6c.execute-api.sa-east-1.amazonaws.com/prod/talento360';
 const STORAGE_KEY = 'talento360_state_v1';
 
 // ===== Estado =====
 let state = {
   startedAt: new Date().toISOString(),
   currentStep: 1,
-  answers: {}, //
+  answers: {}, // { g1: "D", g2: "I", ... }
   nome: '',
   email: ''
 };
@@ -34,6 +34,14 @@ const progressText = qs('#progress-text');
 const msg = qs('#msg');
 const inputNome = qs('#nome');
 const inputEmail = qs('#email');
+
+// ===== Fallback de segurança: garante que o Grupo 1 aparece mesmo se algo falhar =====
+document.addEventListener('DOMContentLoaded', () => {
+  const step1 = document.querySelector('.step[data-step="1"]');
+  if (step1 && step1.hasAttribute('hidden')) {
+    step1.removeAttribute('hidden');
+  }
+});
 
 // ===== Init =====
 loadState();
