@@ -17,4 +17,4 @@ O código aqui disponibilizado é protegido por direitos autorais e **não é so
 
 ## Contato
 Para solicitar autorização de uso ou informações adicionais, entre em contato:  
-📧 contato@katiaarrudarh.com.br
+📧 consultoria@katiaarrudarh.com.br
