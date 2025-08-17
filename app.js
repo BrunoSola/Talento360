@@ -1,6 +1,6 @@
 // ===== Config =====
 const TOTAL_STEPS = 24; // ajuste após duplicar os blocos .step no HTML
-const API_URL = 'https://<api-id>.execute-api.<regiao>.amazonaws.com/prod/disc'; // definir na Parte API
+const API_URL = 'https://j6g4zsev6c.execute-api.sa-east-1.amazonaws.com/prod/talento360'; // definir na Parte API
 const STORAGE_KEY = 'talento360_state_v1';
 
 // ===== Estado =====
