@@ -35,8 +35,8 @@
     </section>
 
     <form id="disc-form" novalidate>
-      <!-- STEP 1 -->
-      <section class="card step" data-step="1" hidden>
+      <!-- STEP 1: visível por padrão -->
+      <section class="card step" data-step="1">
         <h3>Grupo 1</h3>
         <p>Escolha a alternativa que mais se aproxima do seu comportamento no trabalho.</p>
         <fieldset>
@@ -60,7 +60,7 @@
         </fieldset>
       </section>
 
-      <!-- STEP 2 -->
+      <!-- STEP 2 (exemplo; duplique até 24) -->
       <section class="card step" data-step="2" hidden>
         <h3>Grupo 2</h3>
         <p>Selecione a alternativa que melhor te define na maioria das situações.</p>
@@ -75,4 +75,32 @@
             I — Entusiasta, gosta de interagir e persuadir.
           </label>
           <label class="option">
-            <i
+            <input type="radio" name="g2" value="S">
+            S — Paciente, bom ouvinte, mantém o ritmo.
+          </label>
+          <label class="option">
+            <input type="radio" name="g2" value="C">
+            C — Preciso(a), segue padrões, busca acurácia.
+          </label>
+        </fieldset>
+      </section>
+
+      <!-- Duplicar blocos .step até o grupo 24 -->
+
+      <div class="nav">
+        <button type="button" id="btn-prev" class="btn secondary" disabled>← Voltar</button>
+        <button type="button" id="btn-next" class="btn">Próximo →</button>
+        <button type="submit" id="btn-submit" class="btn primary" hidden>Enviar respostas</button>
+      </div>
+      <p id="msg" role="status" aria-live="polite" class="msg"></p>
+    </form>
+  </main>
+
+  <footer class="container foot">
+    <small>© Katia Arruda Recursos Humanos • Talento360</small>
+  </footer>
+
+  <!-- usa defer para garantir que o JS carregue após o HTML -->
+  <script defer src="./app.js"></script>
+</body>
+</html>
